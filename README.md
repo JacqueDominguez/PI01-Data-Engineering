@@ -1,6 +1,10 @@
 # Cómo realizar tu primer API con FastAPI y Deta. 
 
 Bienvenido! Si llegaste hasta acá probablemente buscás alguna forma fácil y gratuita de realizar una Application Programming Interface (API) y realizar su deployment para que cualquier persona pueda acceder a las consultas desde cualquier parte del mundo. 
+<div>
+<img src="https://amalgjose.files.wordpress.com/2021/02/fast_api_ppt.png?w=816&h=9999?resize=1500%2C720&quality=80&ssl=1" width="300px">  
+<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--HhcPKSOJ--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/zkp5uldyd7wo1k7w8f3r.png?resize=1500%2C720&quality=80&ssl=1" width="370px">
+
 
 </div>
 
