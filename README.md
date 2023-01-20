@@ -73,11 +73,11 @@ Como primer paso hay que realizar una cuenta en Deta, luego crear una carpeta so
 
 Podés hacer click en los siguientes enlaces para probar cada una de las consultas detalladas anteriormente: 
 
-https://07o5qt.deta.dev/get_word_count/(netflix,love)
-https://07o5qt.deta.dev/get_score_count/(netflix,85,2010)
-https://07o5qt.deta.dev/get_second_score/(amazon)
-https://07o5qt.deta.dev/get_longest/(netflix,min,2016)
-https://07o5qt.deta.dev/get_rating_count/(18%2B)
++ https://07o5qt.deta.dev/get_word_count/(netflix,love)
++ https://07o5qt.deta.dev/get_score_count/(netflix,85,2010)
++ https://07o5qt.deta.dev/get_second_score/(amazon)
++ https://07o5qt.deta.dev/get_longest/(netflix,min,2016)
++ https://07o5qt.deta.dev/get_rating_count/(18%2B)
 
 </div>
 
@@ -93,8 +93,8 @@ https://07o5qt.deta.dev/get_rating_count/(18%2B)
 
 ## Para realizar este proyecto las siguientes fuentes de información fueron de gran ayuda: 
 
-https://fastapi.tiangolo.com/tutorial/
-https://docs.deta.sh/docs/micros/getting_started/?ref=fastapi
-https://awstip.com/deploying-a-fastapi-service-on-deta-959f86a8982a
-https://www.youtube.com/watch?v=J0y2tjBz2Ao&t=685s
-https://www.youtube.com/watch?v=dAQENEPAqsc&t=2219s
++ https://fastapi.tiangolo.com/tutorial/
++ https://docs.deta.sh/docs/micros/getting_started/?ref=fastapi
++ https://awstip.com/deploying-a-fastapi-service-on-deta-959f86a8982a
++ https://www.youtube.com/watch?v=J0y2tjBz2Ao&t=685s
++ https://www.youtube.com/watch?v=dAQENEPAqsc&t=2219s
