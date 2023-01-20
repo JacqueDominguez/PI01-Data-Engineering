@@ -1,6 +1,6 @@
 # PI01-Data-Engineering. 
 
-Bienvenido! Si llegaste hasta acá probablemente buscás alguna forma fácil y gratuita de realizar una Application Programming Interface (API) y realizar su deployment para que cualquier persona pueda acceder a la consulta desde cualquier parte del mundo. 
+Bienvenido! Si llegaste hasta acá probablemente buscás alguna forma fácil y gratuita de realizar una Application Programming Interface (API) y realizar su deployment para que cualquier persona pueda acceder a las consultas desde cualquier parte del mundo. 
 
 </div>
 
@@ -22,7 +22,8 @@ Para este proyecto utilicé FastAPI, un web framework moderno y de alto rendimie
 
 </div>
 
-## Fuente de los datos
+## Fuente de datos
+
 Para realizar este trabajo se utlizaron los archivos ubicados en la carpeta Datasets que corresponden a informacion sobre series y peliculas de las plataformas de Amazon, Disney, Hulu y Netflix.
 <div>
 <img src="https://i0.wp.com/codigoespagueti.com/wp-content/uploads/2020/07/Amazon-Prime-Video-Perfiles-Netflix-1.jpg?resize=1200%2C720&quality=80&ssl=1" width="200px">
@@ -36,9 +37,9 @@ Para realizar este trabajo se utlizaron los archivos ubicados en la carpeta Data
 
 ### 1- Extraccion y transformación:
 
-Para ello utilicé Python , más especificamente las librerias pandas y numpy (podras encontrar todo el código dentro del notebook llamado **Transformaciones**) y por último convertí el dataframe en el archivo [data.csv](/data.csv) para utilizar en la elaboración de la API.
+Para ello utilicé Python , más especificamente las librerias pandas y numpy (podras encontrar todo el código dentro del notebook [transformaciones.ipynb](/transformaciones.ipynb)) y por último convertí el dataframe en el archivo [data.csv](/Datasets/data.csv) para utilizar en la elaboración de la API.
 
-### 2- Desarrollo de la API:
+### 2- Desarrollo de la API en [FastAPI](https://fastapi.tiangolo.com/):
 
 Para ello utilicé un entorno virtual donde se instaló FastAPI, Pandas y Uvicorn. Luego desarrollé la API con FastApi (podras encontrar todo el código dentro del archivo [main.py](/main.py), en donde en pocas lineas se realiza la configuración , se extra el dataset desde una url (para lograr disponibilizar los datos en la etapa del deploy) y se crean cinco funciones para las consultas: 
 
@@ -48,20 +49,47 @@ Para ello utilicé un entorno virtual donde se instaló FastAPI, Pandas y Uvicor
 + get_longest: película o serie que más duró según año, plataforma y tipo de duración.
 + get_rating_count: cantidad de series y películas por tipo de rating.
 
-Durante la etapa de desarrollo revisé el funcionamiento integral de la API y sus consultas de manera local desde la terminal con el comando ***uvicorn main:app --reload***  en el localhost http://127.0.0.1:8000/ . Una vez logrado el adecuado funcionamiento de API de manera local realice en archivo de requerimientos con el comando  ***pip freeze > requirements.txt***
+Durante la etapa de desarrollo revisé el funcionamiento integral de la API y sus consultas de manera local desde la terminal con el comando ***uvicorn main:app --reload***  en el localhost http://127.0.0.1:8000/ . Una vez logrado el adecuado funcionamiento de API de manera local realice en archivo de requerimientos con el comando  ***pip freeze > requirements.txt***. 
 
-### 3- Deployment:
-Q sé yo
+Aclaracion: Si ha utilizado el comando pip freeze > requirements.txt en powershell Windows, el archivo creado no está codificado en UTF-8. Cambie la codificación o cree un nuevo archivo con la codificación correcta para poder realizar el deploy. No olvide borrar de los requerimientos a uvicorn ya que no es necesario para el deploy.
 
+### 3- Deployment en [Deta](https://www.deta.sh/?ref=fastapi):
 
+Como primer paso hay que realizar una cuenta en Deta, luego crear una carpeta solo con los archivos [main.py](/main.py) y [requirements.txt](/requirements.txt) y desde esa carpeta ejecutar los siguientes comandos en PowerShell (si su sistema operativo no es Windows consulte la [documentación](https://docs.deta.sh/docs/micros/getting_started/?ref=fastapi) ):
+
++ ***iwr https://get.deta.dev/cli.ps1 -useb | iex*** -- Instalación del CLI.
++ ***deta login*** -- Abre el navegador para que pueda loguearse con su cuenta .
++ ***deta new --python*** -- Acaba de crear una nueva micro. Pruebe en el navegador el "endpoint" que otorga en la pantalla si dice "Hola Mundo" la conexión fue exitosa.
++ ***deta deploy*** -- Realiza el deploy del proyecto
++ ***deta auth disable*** -- Disponibiliza el proyecto para cualquier persona.
+
+</div>
+
+## ¿Te gustaria probar mi API? 
+
+Hacé click en los siguientes enlaces para probar cada una de las consultas detalladas anteriormente: 
+
+https://07o5qt.deta.dev/get_word_count/(netflix,love)
+https://07o5qt.deta.dev/get_score_count/(netflix,85,2010)
+https://07o5qt.deta.dev/get_second_score/(amazon)
+https://07o5qt.deta.dev/get_longest/(netflix,min,2016)
+
+</div>
 
 ## Tecnologías Utilizadas
+
 * [Pandas](https://pandas.pydata.org/)
 * [FastAPI](https://fastapi.tiangolo.com/)
 * [Uvicorn](https://www.uvicorn.org/)
 * [Deta](https://www.deta.sh/)
 
-## Video en YouTube
-Acá el video en YouTube explicando mi proyecto prevemente: (Haga click en la imagen)
+</div>
 
-[<img src=https://www.cinco8.com/wp-content/uploads/2020/08/404.png width = "200px">]()
+## Para realizar este proyecto las siguientes fuentes de información fueron de gran ayuda: 
+
+https://fastapi.tiangolo.com/tutorial/
+https://docs.deta.sh/docs/micros/getting_started/?ref=fastapi
+https://awstip.com/deploying-a-fastapi-service-on-deta-959f86a8982a
+
+https://www.youtube.com/watch?v=J0y2tjBz2Ao&t=685s
+https://www.youtube.com/watch?v=dAQENEPAqsc&t=2219s
