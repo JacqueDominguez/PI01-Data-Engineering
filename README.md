@@ -1,5 +1,5 @@
 # PI01-Data-Engineering. 
-Bienvenidos al primer proyecto individual de la etapa de labs de Henry. En esta oportunidad desarrollando el rol de un Data Engineer.
+Bienvenidos al primer proyecto individual de la etapa de labs de Henry. En esta oportunidad desarrollé el rol de un Data Engineer.
 
 ## Rol a desarrollar
 
