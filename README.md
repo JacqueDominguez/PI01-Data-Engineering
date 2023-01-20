@@ -69,9 +69,9 @@ Como primer paso hay que realizar una cuenta en Deta, luego crear una carpeta so
 
 </div>
 
-## ¿Te gustaria probar mi API? 
+## ¿Te gustaría probar mi API? 
 
-Hacé click en los siguientes enlaces para probar cada una de las consultas detalladas anteriormente: 
+Podés hacer click en los siguientes enlaces para probar cada una de las consultas detalladas anteriormente: 
 
 https://07o5qt.deta.dev/get_word_count/(netflix,love)
 
