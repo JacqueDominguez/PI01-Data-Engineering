@@ -85,6 +85,7 @@ https://07o5qt.deta.dev/get_longest/(netflix,min,2016)
 
 ## Tecnologías Utilizadas
 
+* [Python](https://www.python.org/)
 * [Pandas](https://pandas.pydata.org/)
 * [FastAPI](https://fastapi.tiangolo.com/)
 * [Uvicorn](https://www.uvicorn.org/)
