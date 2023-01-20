@@ -70,8 +70,11 @@ Como primer paso hay que realizar una cuenta en Deta, luego crear una carpeta so
 Hacé click en los siguientes enlaces para probar cada una de las consultas detalladas anteriormente: 
 
 https://07o5qt.deta.dev/get_word_count/(netflix,love)
+
 https://07o5qt.deta.dev/get_score_count/(netflix,85,2010)
+
 https://07o5qt.deta.dev/get_second_score/(amazon)
+
 https://07o5qt.deta.dev/get_longest/(netflix,min,2016)
 
 </div>
